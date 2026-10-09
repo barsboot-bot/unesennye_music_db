@@ -1,38 +1,19 @@
-# UNESENNYE MUSIC DB v1.2.3
+# UNESENNYE MUSIC DB v1.2.4
 
 **Author:** KRa Tos (Константин)  
-**Version:** 1.2.3
+**Version:** 1.2.4
 
-Публичная база музыки для системы Unesennye.
+## Fixes in 1.2.4
+- Sound paths use forward slashes
+- Removed invalid rangeCurve reference
+- Documented that real `.ogg` files must be added before PBO pack
 
-## Структура
-
+## Required before pack
+Put your files at:
 ```
-@unesennye_music_db/
-├── mod.cpp
-├── config.cpp          ← CfgSoundShaders / CfgSoundSets
-├── Scripts/
-│   └── 3_Game/
-│       └── UnesennyeSoundConfig.c
-├── sounds/
-│   ├── sd_playlists/
-│   │   └── 01/
-│   │       ├── track_01.ogg   ← положите свои файлы
-│   │       ├── track_01.meta
-│   │       └── meta.txt
-│   ├── Type/
-│   └── CD/
-└── tools/
-    └── generate_music_meta.bat
+sounds/sd_playlists/01/track_01.ogg
+sounds/sd_playlists/01/track_02.ogg
 ```
-
-## Добавление музыки
-
-1. Скопируйте `.ogg` в `sounds/sd_playlists/01/` (или Type/CD).
-2. Запустите `tools\generate_music_meta.bat`.
-3. Добавьте соответствующие `CfgSoundShaders` / `CfgSoundSets` в `config.cpp` (или расширьте скрипт генерации).
-4. Перепакуйте PBO.
 
 ## Author
-
 **KRa Tos (Константин)**

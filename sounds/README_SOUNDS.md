@@ -1,38 +1,18 @@
-# Sounds folder
+# Sounds — IMPORTANT
 
-Place your `.ogg` (recommended) files here.
-
-## Structure for SD Cards
+You must place real audio files here before packaging:
 
 ```
-sounds/
-  sd_playlists/
-    01/
-      track_01.ogg
-      track_01.meta
-      track_02.ogg
-      track_02.meta
-      meta.txt
-    02/
-      ...
+sounds/sd_playlists/01/track_01.ogg
+sounds/sd_playlists/01/track_02.ogg
+sounds/sd_playlists/02/track_01.ogg
 ```
 
-## Structure for Type / CD
+DayZ expects the path in config **without** the `.ogg` extension:
+`unesennye_music_db/sounds/sd_playlists/01/track_01`
 
-```
-sounds/
-  Type/
-    Rock_80s/
-      song1.ogg
-      song1.meta
-      meta.txt
-  CD/
-    Classic/
-      ...
-```
+After adding files, run `tools/generate_music_meta.bat` to refresh `.meta` and `meta.txt`.
 
-After adding files run `tools/generate_music_meta.bat` from the servermod repository
-(or copy the bat here) to regenerate all `.meta` and `meta.txt`.
+Then add matching CfgSoundShaders / CfgSoundSets entries in config.cpp if you add new playlist IDs.
 
-Then add corresponding CfgSoundShaders / CfgSoundSets entries in config.cpp
-(or use a build script that generates them).
+**Author:** KRa Tos (Константин)

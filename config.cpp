@@ -1,4 +1,4 @@
-// Author: KRa Tos (Константин) | Project: Unesennye Music System v1.2.3
+// Author: KRa Tos (Константин) | Project: Unesennye Music System v1.2.4
 // Do not remove this header. Unauthorized redistribution is prohibited.
 
 class CfgPatches
@@ -25,7 +25,7 @@ class CfgMods
 		credits = "KRa Tos (Константин)";
 		author = "KRa Tos (Константин)";
 		authorID = "";
-		version = "1.2.3";
+		version = "1.2.4";
 		extra = 0;
 		type = "mod";
 		dependencies[] = {"Game"};
@@ -41,25 +41,29 @@ class CfgMods
 	};
 };
 
-// ==================== SOUND SHADERS / SETS ====================
-// Placeholder entries. Replace paths with real .ogg from sounds/ folder.
+// Sound paths use forward slashes. Place real .ogg next to these names.
+// File on disk: sounds/sd_playlists/01/track_01.ogg
+// Config path:  unesennye_music_db/sounds/sd_playlists/01/track_01
 class CfgSoundShaders
 {
 	class Unesennye_Track_Base_SoundShader
 	{
-		samples[] = {{ "unesennye_music_db\sounds\placeholder", 1 }};
+		samples[] = {{ "unesennye_music_db/sounds/placeholder", 1 }};
 		volume = 1.0;
-		range = 150;
-		rangeCurve = "defaultMusicCurve";
+		range = 80;
 	};
 
 	class Unesennye_SD_01_Track_01_SoundShader : Unesennye_Track_Base_SoundShader
 	{
-		samples[] = {{ "unesennye_music_db\sounds\sd_playlists\01\track_01", 1 }};
+		samples[] = {{ "unesennye_music_db/sounds/sd_playlists/01/track_01", 1 }};
 	};
 	class Unesennye_SD_01_Track_02_SoundShader : Unesennye_Track_Base_SoundShader
 	{
-		samples[] = {{ "unesennye_music_db\sounds\sd_playlists\01\track_02", 1 }};
+		samples[] = {{ "unesennye_music_db/sounds/sd_playlists/01/track_02", 1 }};
+	};
+	class Unesennye_SD_02_Track_01_SoundShader : Unesennye_Track_Base_SoundShader
+	{
+		samples[] = {{ "unesennye_music_db/sounds/sd_playlists/02/track_01", 1 }};
 	};
 };
 
@@ -81,5 +85,9 @@ class CfgSoundSets
 	class Unesennye_SD_01_Track_02_SoundSet : Unesennye_Track_Base_SoundSet
 	{
 		soundShaders[] = { "Unesennye_SD_01_Track_02_SoundShader" };
+	};
+	class Unesennye_SD_02_Track_01_SoundSet : Unesennye_Track_Base_SoundSet
+	{
+		soundShaders[] = { "Unesennye_SD_02_Track_01_SoundShader" };
 	};
 };
