@@ -1,6 +1,6 @@
-# Sounds — IMPORTANT
+# Звуки — ВАЖНО
 
-You must place real audio files here before packaging:
+Перед упаковкой мода положите сюда реальные аудиофайлы:
 
 ```
 sounds/sd_playlists/01/track_01.ogg
@@ -8,11 +8,14 @@ sounds/sd_playlists/01/track_02.ogg
 sounds/sd_playlists/02/track_01.ogg
 ```
 
-DayZ expects the path in config **without** the `.ogg` extension:
-`unesennye_music_db/sounds/sd_playlists/01/track_01`
+В `config.cpp` путь указывается **без** расширения `.ogg`:
 
-After adding files, run `tools/generate_music_meta.bat` to refresh `.meta` and `meta.txt`.
+```
+unesennye_music_db/sounds/sd_playlists/01/track_01
+```
 
-Then add matching CfgSoundShaders / CfgSoundSets entries in config.cpp if you add new playlist IDs.
+После добавления файлов запустите `tools/generate_music_meta.bat` — обновятся `.meta`, `meta.txt` и сниппет SoundSet.
 
-**Author:** KRa Tos (Константин)
+Если добавляете новые ID плейлистов — допишите записи в `CfgSoundShaders` / `CfgSoundSets`.
+
+**Автор:** KRa Tos (Константин)
