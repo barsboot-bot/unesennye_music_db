@@ -1,0 +1,6 @@
+name=01
+id=01
+tracks=track_01.ogg,track_02.ogg
+count=2
+generated_by=Unesennye generate_music_meta.bat v1.2.3
+author=KRa Tos (Константин)
